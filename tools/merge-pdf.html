@@ -5,40 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Merge PDF Online – Free & Fast | ToolHub</title>
+  <title>Merge PDF Online - Free & Fast | ToolHub</title>
 
   <meta name="description"
     content="Merge multiple PDF files online for free. Fast, secure and easy to use PDF merger tool.">
   <meta name="robots" content="index, follow">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <link href="../assets/css/main.css" rel="stylesheet" />
+        <link href="../assets/css/custom.css" rel="stylesheet" />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#B11226",
-            bgsoft: "#F8F9FA",
-            darktext: "#1F2937",
-            borderclr: "#E5E7EB",
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    #spinner {
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
 </head>
 
 <body class="bg-bgsoft text-darktext">
@@ -46,11 +21,11 @@
   <!-- NAVBAR -->
   <header class="bg-white border-b border-borderclr">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-primary">ToolHub</a>
-      <nav class="space-x-6 text-gray-600">
-        <a href="index.html" class="hover:text-primary">Home</a>
-        <a href="tools.html" class="hover:text-primary">Tools</a>
-        <a href="about.html" class="hover:text-primary">About</a>
+      <a href="/index.html" class="text-2xl font-bold text-primary">ToolHub</a>
+      <nav class="space-x-6 text-lg text-gray-600">
+        <a href="/index.html" class="hover:text-primary">Home</a>
+        <a href="/tools.html" class="hover:text-primary">Tools</a>
+        <a href="/about.html" class="hover:text-primary">About</a>
       </nav>
     </div>
   </header>
@@ -58,17 +33,18 @@
   <!-- BREADCRUMB -->
   <section class="bg-gray-50 py-4 px-6 border-b border-borderclr">
     <div class="max-w-7xl mx-auto">
-      <nav class="text-sm text-gray-500 flex items-center gap-2">
-        <a href="index.html" class="hover:text-primary transition">Home</a>
+      <nav class="text-m text-gray-500 flex items-center gap-2">
+        <a href="/index.html" class="hover:text-primary transition">Home</a>
         <span>›</span>
-        <a href="tools.html" class="hover:text-primary transition">Tools</a>
+        <a href="/tools.html" class="hover:text-primary transition">Tools</a>
         <span>›</span>
         <span class="text-gray-900 font-medium">Merge PDF</span>
       </nav>
     </div>
   </section>
 
-  <!-- MAIN TOOL SECTION -->
+  <main>
+    <!-- MAIN TOOL SECTION -->
   <section class="bg-gray-100 py-20 px-4">
     <div class="max-w-2xl mx-auto">
       <div class="bg-white rounded-2xl shadow-xl p-10 text-center">
@@ -109,27 +85,27 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="bg-white border-t border-borderclr py-16">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">How It Works</h2>
+  <section class="bg-white border-t border-borderclr py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-16">How It Works</h2>
       <div class="grid md:grid-cols-3 gap-8 mt-10">
 
         <div class="p-6">
-          <div class="text-primary text-3xl font-bold mb-3">1</div>
-          <h3 class="font-semibold mb-2">Upload PDFs</h3>
-          <p class="text-gray-600">Select PDF files from your device.</p>
+          <div class="text-primary text-4xl font-bold mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Upload PDFs</h3>
+          <p class="text-gray-600 text-m">Select PDF files from your device.</p>
         </div>
 
         <div class="p-6">
-          <div class="text-primary text-3xl font-bold mb-3">2</div>
-          <h3 class="font-semibold mb-2">Merge Automatically</h3>
-          <p class="text-gray-600">All selected PDFs are combined instantly.</p>
+          <div class="text-primary text-4xl font-bold mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">Merge Automatically</h3>
+          <p class="text-gray-600 text-m">All selected PDFs are combined instantly.</p>
         </div>
 
         <div class="p-6">
-          <div class="text-primary text-3xl font-bold mb-3">3</div>
-          <h3 class="font-semibold mb-2">Download</h3>
-          <p class="text-gray-600">Download the merged PDF with a single click.</p>
+          <div class="text-primary text-4xl font-bold mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">Download</h3>
+          <p class="text-gray-600 text-m">Download the merged PDF with a single click.</p>
         </div>
 
       </div>
@@ -142,7 +118,7 @@
 
     <div class="text-center mb-12">
       <h2 class="text-4xl font-bold text-gray-900 mb-4">
-        Free PDF Merger – Merge PDF Files Online
+        Free PDF Merger - Merge PDF Files Online
       </h2>
       <p class="text-gray-500 max-w-2xl mx-auto">
         Combine multiple PDF files into a single PDF quickly and securely. Our online PDF merger is fast, free, and easy to use.
@@ -210,53 +186,54 @@
 </section>
 
   <!-- FAQ -->
-  <section class="py-20 px-4 bg-white">
+  <section class="py-24 px-6 bg-white">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-14">Frequently Asked Questions</h2>
 
-      <div class="space-y-4">
-        <div class="bg-white rounded-xl shadow-md">
-          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+      <div class="space-y-5">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
             Is this Merge PDF tool free?
-            <span class="faq-icon">+</span>
+            <span class="faq-icon text-xl">+</span>
           </button>
-          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
             Yes, merging PDFs with this tool is completely free. No watermark.
           </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md">
-          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
             Are my files secure?
-            <span class="faq-icon">+</span>
+            <span class="faq-icon text-xl">+</span>
           </button>
-          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
             All processing happens locally in your browser. Files are never uploaded.
           </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md">
-          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
             Can I merge multiple PDFs?
-            <span class="faq-icon">+</span>
+            <span class="faq-icon text-xl">+</span>
           </button>
-          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
             Yes, you can select multiple PDF files and merge them into one PDF.
           </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-md">
-          <button class="faq-toggle w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <button class="faq-toggle w-full text-left p-6 font-semibold text-gray-800 flex justify-between items-center">
             Do I need to install software?
-            <span class="faq-icon">+</span>
+            <span class="faq-icon text-xl">+</span>
           </button>
-          <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm">
+          <div class="faq-content hidden px-6 pb-6 text-gray-600 text-base leading-relaxed">
             No installation is required. The tool works entirely in your browser.
           </div>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
@@ -275,8 +252,8 @@
           <ul class="space-y-2 text-sm">
             <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
             <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
           </ul>
         </div>
 
@@ -300,21 +277,9 @@
       </div>
     </div>
   </footer>
-
-  <script src="assets/js/merge-pdf.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const faqButtons = document.querySelectorAll(".faq-toggle");
-      faqButtons.forEach(button => {
-        button.addEventListener("click", function () {
-          const content = this.nextElementSibling;
-          const icon = this.querySelector(".faq-icon");
-          content.classList.toggle("hidden");
-          icon.textContent = content.classList.contains("hidden") ? "+" : "−";
-        });
-      });
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="/assets/js/vendor/pdf-lib.min.js" defer></script>
+  <script src="../assets/js/merge-pdf.js" defer></script>
 
 </body>
 </html>

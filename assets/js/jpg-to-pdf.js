@@ -1,95 +1,166 @@
+// Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
-  const imageInput = document.getElementById("imageFiles");
-  const uploadMessage = document.getElementById("uploadMessage");
-  const convertBtn = document.getElementById("convertBtn");
-  const downloadPDF = document.getElementById("downloadPDF");
-  const btnText = document.getElementById("btnText");
-  const spinner = document.getElementById("spinner");
-  const progressText = document.getElementById("progressText");
 
-  let selectedFiles = [];
+    // Get required DOM elements
+    const imageInput = document.getElementById("imageFiles");
+    const uploadMessage = document.getElementById("uploadMessage");
+    const convertBtn = document.getElementById("convertBtn");
+    const downloadPDF = document.getElementById("downloadPDF");
+    const btnText = document.getElementById("btnText");
+    const spinner = document.getElementById("spinner");
+    const progressText = document.getElementById("progressText");
+    const faqButtons = document.querySelectorAll(".faq-toggle");
 
-  // -------------------------
-  // Utility: Convert file to Data URL
-  // -------------------------
-  const fileToDataURL = (file) =>
-    new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
+    // Destructure jsPDF from global window object
+    const { jsPDF } = window.jspdf;
+
+    // Store selected image files
+    let selectedFiles = [];
+
+    // --------------------------------------------------
+    // Utility Function: Convert file to Base64 Data URL
+    // --------------------------------------------------
+    const fileToDataURL = (file) =>
+        new Promise((resolve, reject) => {
+            const reader = new FileReader();
+
+            // Resolve with Base64 result
+            reader.onload = () => resolve(reader.result);
+
+            // Reject if error occurs
+            reader.onerror = reject;
+
+            // Read file as Data URL
+            reader.readAsDataURL(file);
+        });
+
+    // --------------------------------------------------
+    // Utility Function: Enable / Disable convert button
+    // --------------------------------------------------
+    const setButtonState = (enabled) => {
+        convertBtn.disabled = !enabled;
+
+        // Add/remove styling based on state
+        convertBtn.classList.toggle("opacity-50", !enabled);
+        convertBtn.classList.toggle("cursor-not-allowed", !enabled);
+    };
+
+    // --------------------------------------------------
+    // Handle Image File Selection
+    // --------------------------------------------------
+    imageInput.addEventListener("change", (e) => {
+
+        // Filter only JPG and PNG files
+        selectedFiles = Array.from(e.target.files)
+            .filter((file) =>
+                ["image/jpeg", "image/png"].includes(file.type)
+            );
+
+        // If no valid images selected, exit
+        if (!selectedFiles.length) return;
+
+        // Update UI after selection
+        uploadMessage.classList.remove("hidden");
+        convertBtn.classList.remove("hidden");
+        downloadPDF.classList.add("hidden");
+        progressText.classList.add("hidden");
     });
 
-  // -------------------------
-  // Update button state
-  // -------------------------
-  const setButtonState = (enabled) => {
-    convertBtn.disabled = !enabled;
-    convertBtn.classList.toggle("opacity-50", !enabled);
-    convertBtn.classList.toggle("cursor-not-allowed", !enabled);
-  };
+    // --------------------------------------------------
+    // Convert Selected Images to PDF
+    // --------------------------------------------------
+    convertBtn.addEventListener("click", async () => {
 
-  // -------------------------
-  // Handle file selection
-  // -------------------------
-  imageInput.addEventListener("change", (e) => {
-    selectedFiles = Array.from(e.target.files).filter((file) =>
-      ["image/jpeg", "image/png"].includes(file.type)
-    );
+        // Prevent execution if no files selected
+        if (!selectedFiles.length) return;
 
-    if (!selectedFiles.length) return;
+        // Show loading UI state
+        btnText.innerText = "Converting...";
+        spinner.classList.remove("hidden");
+        setButtonState(false);
+        progressText.classList.remove("hidden");
+        progressText.innerText = "Preparing file...";
 
-    uploadMessage.classList.remove("hidden");
-    convertBtn.classList.remove("hidden");
-    downloadPDF.classList.add("hidden");
-    progressText.classList.add("hidden");
-  });
+        // Create new PDF document
+        const pdf = new jsPDF();
 
-  // -------------------------
-  // Convert images to PDF
-  // -------------------------
-  convertBtn.addEventListener("click", async () => {
-    if (!selectedFiles.length) return;
+        // Loop through selected images
+        for (let i = 0; i < selectedFiles.length; i++) {
 
-    // Start UI state
-    btnText.innerText = "Converting...";
-    spinner.classList.remove("hidden");
-    setButtonState(false);
-    progressText.classList.remove("hidden");
-    progressText.innerText = "Preparing file...";
+            const file = selectedFiles[i];
 
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF();
+            // Update progress message
+            progressText.innerText =
+                `Converting page ${i + 1} of ${selectedFiles.length}...`;
 
-    for (let i = 0; i < selectedFiles.length; i++) {
-      const file = selectedFiles[i];
-      progressText.innerText = `Converting page ${i + 1} of ${selectedFiles.length}...`;
+            // Convert image to Base64
+            const imgData = await fileToDataURL(file);
 
-      const imgData = await fileToDataURL(file);
+            // Wait for image to load before adding to PDF
+            await new Promise((resolve) => {
 
-      await new Promise((resolve) => {
-        const img = new Image();
-        img.src = imgData;
-        img.onload = () => {
-          const imgWidth = pdf.internal.pageSize.getWidth();
-          const imgHeight = (img.height * imgWidth) / img.width;
-          if (i > 0) pdf.addPage();
-          pdf.addImage(imgData, "JPEG", 0, 0, imgWidth, imgHeight);
-          resolve();
-        };
-      });
-    }
+                const img = new Image();
+                img.src = imgData;
 
-    // Conversion complete
-    progressText.innerText = "✅ Conversion Successful!";
-    downloadPDF.classList.remove("hidden");
-    downloadPDF.onclick = () => pdf.save("converted.pdf");
+                img.onload = () => {
 
-    // Reset button
-    spinner.classList.add("hidden");
-    btnText.innerText = "Convert Another File";
-    setButtonState(true);
+                    // Calculate image dimensions to fit page width
+                    const imgWidth = pdf.internal.pageSize.getWidth();
+                    const imgHeight =
+                        (img.height * imgWidth) / img.width;
 
-    convertBtn.onclick = () => location.reload();
-  });
+                    // Add new page except for first image
+                    if (i > 0) pdf.addPage();
+
+                    // Add image to PDF
+                    pdf.addImage(
+                        imgData,
+                        "JPEG",
+                        0,
+                        0,
+                        imgWidth,
+                        imgHeight
+                    );
+
+                    resolve();
+                };
+            });
+        }
+
+        // Conversion successful
+        progressText.innerText = "✅ Conversion Successful!";
+
+        // Show download button
+        downloadPDF.classList.remove("hidden");
+
+        // Attach download handler
+        downloadPDF.onclick = () =>
+            pdf.save("converted.pdf");
+
+        // Reset button state
+        spinner.classList.add("hidden");
+        btnText.innerText = "Convert Another File";
+        setButtonState(true);
+
+        // Reload page when clicking convert again
+        convertBtn.onclick = () => location.reload();
+    });
+
+    // --------------------------------------------------
+    // FAQ Toggle Logic
+    // --------------------------------------------------
+    faqButtons.forEach((button) => {
+
+        button.addEventListener("click", function () {
+            
+            const content = this.nextElementSibling;
+            const icon = this.querySelector(".faq-icon");
+
+            // Toggle visibility
+            content.classList.toggle("hidden");
+
+            // Update icon symbol
+            icon.textContent = content.classList.contains("hidden") ? "+" : "-";
+        });
+    });
 });
