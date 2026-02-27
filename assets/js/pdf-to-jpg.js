@@ -1,3 +1,6 @@
+// Configure PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc ="../assets/js/vendor/pdf.worker.min.js";
+
 // Wait until DOM is fully loaded before executing script
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -5,11 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const pdfInput = document.getElementById("pdfFile");
     const uploadMessage = document.getElementById("uploadMessage");
     const convertBtn = document.getElementById("convertBtn");
-    const downloadSingle = document.getElementById("downloadSingle");
-    const downloadZip = document.getElementById("downloadZip");
     const btnText = document.getElementById("btnText");
     const spinner = document.getElementById("spinner");
     const progressText = document.getElementById("progressText");
+    const downloadSingle = document.getElementById("downloadSingle");
+    const downloadZip = document.getElementById("downloadZip");
+    const downloadMessage = document.getElementById("downloadMessage");
     const faqButtons = document.querySelectorAll(".faq-toggle");
 
     // Store selected PDF file and generated images
@@ -135,6 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
         link.href = images[0];
         link.download = "converted.jpg";
         link.click();
+
+        downloadMessage.classList.remove("hidden");
+        downloadMessage.innerText = "✅ Download Successful!";
     });
 
     // --------------------------------------------------
@@ -162,6 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
         link.href = URL.createObjectURL(content);
         link.download = "converted-images.zip";
         link.click();
+
+        downloadMessage.classList.remove("hidden");
+        downloadMessage.innerText = "✅ Download Successful!";
     });
 
     // --------------------------------------------------

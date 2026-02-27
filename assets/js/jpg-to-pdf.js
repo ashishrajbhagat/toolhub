@@ -5,10 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageInput = document.getElementById("imageFiles");
     const uploadMessage = document.getElementById("uploadMessage");
     const convertBtn = document.getElementById("convertBtn");
-    const downloadPDF = document.getElementById("downloadPDF");
     const btnText = document.getElementById("btnText");
     const spinner = document.getElementById("spinner");
     const progressText = document.getElementById("progressText");
+    const downloadPDF = document.getElementById("downloadPDF");
+    const downloadMessage = document.getElementById("downloadMessage");
     const faqButtons = document.querySelectorAll(".faq-toggle");
 
     // Destructure jsPDF from global window object
@@ -134,8 +135,13 @@ document.addEventListener("DOMContentLoaded", () => {
         downloadPDF.classList.remove("hidden");
 
         // Attach download handler
-        downloadPDF.onclick = () =>
+        downloadPDF.addEventListener("click", () => {
+
             pdf.save("converted.pdf");
+
+            downloadMessage.classList.remove("hidden");
+            downloadMessage.innerText = "✅ Download Successful!";
+        });
 
         // Reset button state
         spinner.classList.add("hidden");

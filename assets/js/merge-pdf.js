@@ -5,10 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const pdfInput = document.getElementById("pdfFiles");
     const uploadMessage = document.getElementById("uploadMessage");
     const mergeBtn = document.getElementById("mergeBtn");
-    const downloadPDF = document.getElementById("downloadPDF");
     const btnText = document.getElementById("btnText");
     const spinner = document.getElementById("spinner");
     const progressText = document.getElementById("progressText");
+    const downloadPDF = document.getElementById("downloadPDF");
+    const downloadMessage = document.getElementById("downloadMessage");
     const faqButtons = document.querySelectorAll(".faq-toggle");
 
     // Store selected PDF files
@@ -93,6 +94,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.href = URL.createObjectURL(blob);
                 link.download = "merged.pdf";
                 link.click();
+
+                downloadMessage.classList.remove("hidden");
+                downloadMessage.innerText = "✅ Download Successful!";
             };
 
             // Show success message
