@@ -19,6 +19,7 @@
         <meta property="og:title" content="PDF to JPG Converter - Free Online | MyToolKitPro" />
         <meta property="og:description" content="Convert PDF pages to JPG images instantly. Fast, secure, and completely free." />
         <meta property="og:url" content="https://mytoolkitpro.com/tools/pdf-to-jpg.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
         <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
         
         <!-- Twitter Card Tags -->
@@ -32,6 +33,7 @@
         <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="../assets/manifest.json" />
         
@@ -39,21 +41,76 @@
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "PDF to JPG Converter",
-            "description": "Free online tool to convert PDF pages to JPG images",
-            "url": "https://mytoolkitpro.com/tools/pdf-to-jpg.html",
-            "applicationCategory": "Utility",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "MyToolKitPro",
-                "url": "https://mytoolkitpro.com"
-            }
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "PDF to JPG Converter",
+                    "description": "Free online tool to convert PDF pages to JPG images",
+                    "url": "https://mytoolkitpro.com/tools/pdf-to-jpg.html",
+                    "applicationCategory": "UtilityApplication",
+                    "operatingSystem": "Any",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "MyToolKitPro",
+                        "url": "https://mytoolkitpro.com/"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mytoolkitpro.com/"
+                    },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://mytoolkitpro.com/tools.html"
+                    },{
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "PDF to JPG"
+                    }]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                        "@type": "Question",
+                        "name": "Is this PDF to JPG converter free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, our PDF to JPG converter is completely free to use. There are no hidden charges and no watermark on your images."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Are my files secure?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Your files are processed locally in your browser. We do not upload or store your documents on any server."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Do I need to install any software?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No installation is required. This is a fully online PDF to JPG tool that works directly in your web browser."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Can I convert multiple PDF pages?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. If your PDF has multiple pages, you can download all images together as a ZIP file."
+                        }
+                    }]
+                }
+            ]
         }
         </script>
     </head>

@@ -19,6 +19,7 @@
         <meta property="og:title" content="JPG to PDF Converter - Free Online | MyToolKitPro" />
         <meta property="og:description" content="Convert JPG images to PDF instantly. Multiple images supported. Fast, secure, and free." />
         <meta property="og:url" content="https://mytoolkitpro.com/tools/jpg-to-pdf.html" />
+        <meta property="og:site_name" content="MyToolKitPro" />
         <meta property="og:image" content="https://mytoolkitpro.com/assets/img/og-image.png" />
         
         <!-- Twitter Card Tags -->
@@ -32,6 +33,7 @@
         <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
         <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
         <link rel="manifest" href="../assets/manifest.json" />
         
@@ -39,21 +41,76 @@
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "JPG to PDF Converter",
-            "description": "Free online tool to convert JPG images to PDF",
-            "url": "https://mytoolkitpro.com/tools/jpg-to-pdf.html",
-            "applicationCategory": "Utility",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "MyToolKitPro",
-                "url": "https://mytoolkitpro.com"
-            }
+            "@graph": [
+                {
+                    "@type": "SoftwareApplication",
+                    "name": "JPG to PDF Converter",
+                    "description": "Free online tool to convert JPG images to PDF",
+                    "url": "https://mytoolkitpro.com/tools/jpg-to-pdf.html",
+                    "applicationCategory": "UtilityApplication",
+                    "operatingSystem": "Any",
+                    "offers": {
+                        "@type": "Offer",
+                        "price": "0",
+                        "priceCurrency": "USD"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "MyToolKitPro",
+                        "url": "https://mytoolkitpro.com/"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://mytoolkitpro.com/"
+                    },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Tools",
+                        "item": "https://mytoolkitpro.com/tools.html"
+                    },{
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "JPG to PDF"
+                    }]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                        "@type": "Question",
+                        "name": "Is this JPG to PDF converter free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, this JPG to PDF converter is completely free. No watermark and no hidden charges."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Are my files secure?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. All files are processed locally in your browser. Nothing is uploaded to any server."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Can I convert multiple images at once?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, you can select multiple images and convert them into a single PDF."
+                        }
+                    },{
+                        "@type": "Question",
+                        "name": "Do I need to install software?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No installation is required. The tool works completely in your browser."
+                        }
+                    }]
+                }
+            ]
         }
         </script>
     </head>
