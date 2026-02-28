@@ -78,6 +78,7 @@ MyToolKitPro/
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # SEO robots.txt
 ├── assets/
+│   ├── manifest.json       # PWA manifest file
 │   ├── css/
 │   │   ├── dist/
 │   │   │   └── output.css          # Main compiled stylesheet
