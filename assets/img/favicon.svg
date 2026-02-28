@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#B11226" rx="8"/>
+  
+  <!-- PDF document -->
+  <path d="M 16 10 L 16 50 Q 16 54 20 54 L 48 54 Q 52 54 52 50 L 52 20 L 38 10 Z" fill="white"/>
+  
+  <!-- Fold corner -->
+  <path d="M 38 10 L 48 20 L 38 20 Z" fill="#B11226"/>
+  
+  <!-- Text lines -->
+  <line x1="22" y1="24" x2="44" y2="24" stroke="#B11226" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="31" x2="44" y2="31" stroke="#B11226" stroke-width="1" stroke-linecap="round"/>
+  <line x1="22" y1="37" x2="44" y2="37" stroke="#B11226" stroke-width="1" stroke-linecap="round"/>
+  <line x1="22" y1="43" x2="36" y2="43" stroke="#B11226" stroke-width="1" stroke-linecap="round"/>
+</svg>

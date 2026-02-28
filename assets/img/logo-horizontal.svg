@@ -1,0 +1,21 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon part -->
+  <circle cx="40" cy="40" r="35" fill="#F4F6F8" stroke="#B11226" stroke-width="2"/>
+  
+  <!-- PDF document -->
+  <path d="M 18 15 L 18 60 Q 18 65 23 65 L 57 65 Q 62 65 62 60 L 62 30 L 43 15 Z" fill="#B11226"/>
+  <path d="M 22 18 L 22 62 Q 22 64 24 64 L 57 64 Q 60 64 60 62 L 60 30 L 43 18 Z" fill="white"/>
+  
+  <!-- Fold corner -->
+  <path d="M 43 18 L 57 30 L 43 30 Z" fill="#B11226"/>
+  
+  <!-- Text lines -->
+  <line x1="27" y1="28" x2="50" y2="28" stroke="#1F2937" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="27" y1="35" x2="50" y2="35" stroke="#1F2937" stroke-width="1" stroke-linecap="round"/>
+  <line x1="27" y1="42" x2="50" y2="42" stroke="#1F2937" stroke-width="1" stroke-linecap="round"/>
+  <line x1="27" y1="49" x2="40" y2="49" stroke="#1F2937" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Text label -->
+  <text x="90" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#B11226">MyToolKitPro</text>
+  <text x="90" y="55" font-family="Arial, sans-serif" font-size="12" fill="#1F2937" letter-spacing="1">PDF TOOLKIT</text>
+</svg>

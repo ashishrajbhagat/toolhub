@@ -1,84 +1,88 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <title>Server Error | ToolHub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Something went wrong on our end. Please try again later." />
-    <link href="assets/css/main.css" rel="stylesheet" />
-</head>
-
-<body class="bg-bgsoft text-darktext flex flex-col min-h-screen">
-    <header class="bg-white border-b border-borderclr">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-primary">ToolHub</a>
-            <nav class="space-x-6 text-lg text-gray-600">
-                <a href="index.html" class="hover:text-primary">Home</a>
-                <a href="tools.html" class="hover:text-primary">Tools</a>
-                <a href="about.html" class="hover:text-primary">About</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="py-20 px-6">
-            <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-6xl md:text-7xl font-extrabold text-primary mb-6">500</h1>
-                <h2 class="text-2xl md:text-3xl font-semibold mb-4">Internal Server Error</h2>
-                <p class="text-gray-600 text-base leading-7 mb-8">
-                    Oops! Something went wrong on our side. Our team has been notified and is working to fix the
-                    issue. Please try refreshing the page or come back again in a few minutes.
-                </p>
-                <div class="flex justify-center gap-4 flex-wrap">
-                    <a href="index.html"
-                        class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">
-                        Go Back Home
-                    </a>
-                    <button onclick="location.reload();"
-                        class="border border-borderclr px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition cursor-pointer">
-                        Refresh Page
-                    </button>
+    <head>
+        <!-- Essential Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <!-- SEO Meta Tags -->
+        <title>Server Error (500) | MyToolKitPro</title>
+        <meta name="description" content="Something went wrong on our end. Our team has been notified. Please try again later." />
+        <meta name="robots" content="noindex, follow" />
+        <meta name="theme-color" content="#B11226" />
+        
+        <!-- Links -->
+        <link rel="canonical" href="https://mytoolkitpro.com/" />
+        <link href="assets/css/main.css" rel="stylesheet" />
+        <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+<link rel="manifest" href="assets/manifest.json" />
+    </head>
+    <body class="bg-bgsoft text-darktext flex flex-col min-h-screen">
+        <header class="bg-white border-b border-borderclr">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="40" height="40" />
+                    <span class="text-2xl font-bold text-primary">MyToolKitPro</span>
+                </a>
+                <nav class="space-x-6 text-lg text-gray-600">
+                    <a href="index.html" class="hover:text-primary">Home</a>
+                    <a href="tools.html" class="hover:text-primary">Tools</a>
+                    <a href="about.html" class="hover:text-primary">About</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="py-20 px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h1 class="text-6xl md:text-7xl font-extrabold text-primary mb-6">500</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Internal Server Error</h2>
+                    <p class="text-gray-600 text-base leading-7 mb-8">Oops! Something went wrong on our side. Our team has been notified and is working to fix the issue. Please try refreshing the page or come back again in a few minutes.</p>
+                    <div class="flex justify-center gap-4 flex-wrap">
+                        <a href="index.html" class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">Go Back Home</a>
+                        <button onclick="location.reload();" class="border border-borderclr px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition cursor-pointer">Refresh Page</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-12 mb-12">
+                    <div>
+                        <a href="index.html" class="flex items-center gap-2 mb-4">
+                            <img src="assets/img/favicon.svg" alt="MyToolKitPro" width="28" height="28" class="opacity-90" />
+                            <h3 class="text-white text-xl font-semibold">MyToolKitPro</h3>
+                        </a>
+                        <p class="text-sm leading-relaxed text-gray-400">MyToolKitPro provides free, secure, and fast online tools for PDF and image conversion. All tools work directly in your browser without installation.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                            <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold mb-4">Why MyToolKitPro?</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li>🔒 100% Secure Processing</li>
+                            <li>⚡ Fast Browser-Based Tool</li>
+                            <li>🆓 Free & No Sign-Up</li>
+                            <li>🌍 Available Worldwide</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+                    <p>&copy; <span id="year"></span> MyToolKitPro. All rights reserved.</p>
+                    <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="bg-gray-900 text-gray-300 pt-16 pb-10 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <h3 class="text-white text-xl font-semibold mb-4">ToolHub</h3>
-                    <p class="text-sm leading-relaxed text-gray-400">
-                        ToolHub provides free, secure, and fast online tools for PDF and image conversion. All tools
-                        work directly in your browser without installation.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-semibold mb-4">Why ToolHub?</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>🔒 100% Secure Processing</li>
-                        <li>⚡ Fast Browser-Based Tool</li>
-                        <li>🆓 Free & No Sign-Up</li>
-                        <li>🌍 Available Worldwide</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                <p>© 2026 ToolHub. All rights reserved.</p>
-                <p class="mt-2 text-gray-600 text-sm">Built for simple and secure document conversion.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-
+        </footer>
+        <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    </body>
 </html>

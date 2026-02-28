@@ -1,29 +1,146 @@
 # --- Build Tools & Binaries ---
 # Exclude the standalone Tailwind exe (Keep it locally, don't upload)
 tailwind.exe
+*.exe
 
 # --- Dependencies ---
 # Never upload node_modules; they are too large and can be reinstalled
 node_modules/
 .npm/
+package-lock.json
+yarn.lock
+
+# --- Build Output ---
+# Minified and compiled files are generated during build
+dist/
+build/
+*.min.js
+*.min.css
 
 # --- OS Specific Files ---
 # Windows thumbnail cache
 Thumbs.db
 ehthumbs.db
 desktop.ini
-
-# macOS specific files
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # --- Logs & Performance ---
 # Error logs from npm or other tools
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+*.log
+
+# --- Development & IDE ---
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+.env.local
+.env.*.local
+
+# --- Temporary Files ---
+*.tmp
+*.temp
+.cache/
+.DS_Store
+Thumbs.db
 
 # --- IDE & Editor Settings ---
+# VSCode
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-snippets
+
+# JetBrains IDEs
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/discord.xml
+.idea/**/libraries
+.idea/**/gradle.xml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+*~
+
+# --- System Files ---
+.DS_Store
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- Version Control ---
+*.patch
+*.diff
+
+# --- Distribution / Deployment ---
+# Exclude any dist folders or compressed archives during development
+*.zip
+*.rar
+*.tar
+*.tar.gz
+.env
+
+# --- Local Configuration ---
+# Never commit local environment configs
+config.local.js
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Testing ---
+coverage/
+.nyc_output/
+
+# --- MacOS ---
+.AppleDouble
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Linux ---
+.directory
+*~
+
+# --- Backup Files ---
+*.bak
+*.backup
+*.old
+
+# --- NPM/Yarn ---
+npm-debug.log*
+npm-error.log*
+yarn-error.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- Dependencies lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# --- Runtime ---
+*.pid
+*.seed
+
 # Settings for VS Code
 .vscode/
 # Settings for IntelliJ/WebStorm
 .idea/
+
+# --- Deployment Helpers ---
+/deploy/*.ps1

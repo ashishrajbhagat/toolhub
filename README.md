@@ -1,81 +1,341 @@
-# ToolHub – Online PDF & Image Conversion Tools
+# MyToolKitPro
 
-ToolHub is a set of free, fast, and secure online tools to convert PDFs and images directly in your browser. No installation, no sign-up, and no watermark.
+A comprehensive collection of **free, fast, and secure** online PDF and image conversion tools. All processing happens directly in your browser—no installation, no signup, and no watermarks.
 
-## Tools Included
+## 🌟 Features
 
-- **PDF to JPG** – Convert PDF pages into high-quality JPG images.
-- **JPG to PDF** – Merge multiple JPG/PNG images into a single PDF file.
-- **Merge PDF** – Combine multiple PDF files into one PDF.
+- **PDF to JPG Converter** - Convert PDF pages to high-quality JPG images
+- **JPG to PDF Converter** - Transform images into professional PDF documents
+- **Merge PDF Files** - Combine multiple PDF files into a single document
+- **100% Browser-Based** - All processing happens locally on your device for maximum privacy
+- **No Signup Required** - Start converting immediately without creating an account
+- **Ad-Free & Watermark-Free** - Completely free to use with no hidden limitations
+- **Mobile Responsive** - Works seamlessly on desktop, tablet, and mobile devices
+- **Fast Performance** - Optimized for quick conversions without lag
 
-## How to Use
+## 🛠️ Available Tools
 
-### PDF to JPG
-1. Open `pdf-to-jpg.html`.
-2. Upload your PDF file.
-3. Click **Convert to JPG**.
-4. Download the images individually or as a ZIP.
+### 1. PDF to JPG
+Convert PDF documents into JPG images. Perfect for sharing, archiving, or creating previews.
 
-### JPG to PDF
-1. Open `jpg-to-pdf.html`.
-2. Upload JPG or PNG images.
-3. Click **Convert to PDF**.
-4. Download the resulting PDF.
+**Location:** `/tools/pdf-to-jpg.html`
 
-### Merge PDF
-1. Open `merge-pdf.html`.
-2. Upload multiple PDF files.
-3. Click **Merge PDFs**.
-4. Download the merged PDF.
+### 2. JPG to PDF
+Create professional PDF documents from JPEG images. Great for scanning documents or combining photos.
 
-## Dependencies
+**Location:** `/tools/jpg-to-pdf.html`
 
-- Tailwind CSS
-- PDF.js
-- jsPDF
-- PDF-Lib
-- JSZip
+### 3. Merge PDF
+Combine multiple PDF files into a single, organized document.
 
-> All libraries are included via CDN for development. For production, installing locally is recommended.
+**Location:** `/tools/merge-pdf.html`
 
-## Project Structure
-toolhub/
-├─ index.html
-├─ tools.html
-├─ pdf-to-jpg.html
-├─ jpg-to-pdf.html
-├─ merge-pdf.html
-├─ assets/
-│ ├─ js/
-│ │ ├─ pdf-to-jpg.js
-│ │ ├─ jpg-to-pdf.js
-│ │ └─ merge-pdf.js
-│ └─ css/
-│   └─ styles.css
-└─ README.md
+## �️ Build & Development
 
-## Dependencies
+### Scripts
+Run these commands from the project root:
 
-- [Tailwind CSS](https://tailwindcss.com) – For styling
-- [PDF.js](https://mozilla.github.io/pdf.js/) – For reading PDF files
-- [jsPDF](https://github.com/parallax/jsPDF) – For generating PDFs from images
-- [PDF-Lib](https://pdf-lib.js.org/) – For merging PDF files
-- [JSZip](https://stuk.github.io/jszip/) – For generating ZIP files (used in PDF to JPG)
+```bash
+# CSS build
+npm run build:css          # Build Tailwind CSS once
+npm run watch:css          # Watch CSS files and rebuild
 
-> **Note:** All libraries are loaded via CDN for quick development. For production, consider installing Tailwind CSS and libraries locally for better performance.
+# JavaScript minify
+npm run build:js           # Minify all JS files in assets/js/src
+npm run watch:js           # Watch JS and auto-minify
 
-## Development
+# Full build & development
+npm run build              # Build CSS and JS (one-time)
+npm run dev                # Watch both CSS and JS (development mode)
+```
 
-1. Clone the repository: git clone https://github.com/yourusername/toolhub.git
-2. Open the HTML files in a browser for testing.
+### PWA Icons
 
-3. To build Tailwind CSS for production:
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init
-npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify
+PWA icons are committed as **static assets** in `assets/img/` (icon-72.png through icon-512.png). These are used by the manifest in `assets/manifest.json` for:
+- Home screen installation icons
+- App switcher thumbnails
+- Splash screens on mobile devices
 
-## License
+**To customize icons for production:**
 
-**MIT License** – free to use, modify, and distribute.
+1. Create your branded PNG images at these sizes:
+   - 72×72, 96×96, 128×128, 144×144, 152×152, 192×192, 384×384, 512×512
 
-**ToolHub** – Fast, free, and secure browser-based PDF & image conversion tools.
+2. Replace the files in `assets/img/icon-{size}.png`
+
+3. Commit and deploy:
+   ```bash
+   git add assets/img/icon-*.png
+   git commit -m "Update PWA icons with branded artwork"
+   ```
+
+**Icon generation tools** (if you need to generate from SVG):
+- **ImageMagick** (command line): `magick convert logo.svg -resize 512x512 icon-512.png`
+- **Online**: [AppIcon.co](https://appicon.co), [Icon Generator](https://www.icoconvert.com)
+- **Desktop**: Photoshop, GIMP, Affinity Photo
+
+## 📁 Project Structure
+
+```
+MyToolKitPro/
+├── index.html              # Home page
+├── tools.html              # Tools directory page
+├── about.html              # About page
+├── contact.html            # Contact page
+├── privacy-policy.html     # Privacy policy
+├── terms-of-service.html   # Terms of service
+├── 404.html                # 404 error page
+├── 500.html                # 500 error page
+├── package.json            # Project dependencies & npm scripts
+├── tailwind.config.js      # Tailwind CSS configuration
+├── README.md               # This file
+├── sitemap.xml             # SEO sitemap
+├── robots.txt              # SEO robots.txt
+├── assets/
+│   ├── css/
+│   │   ├── main.css        # Main stylesheet
+│   │   ├── custom.css      # Custom styles
+│   │   └── tailwind.css    # Tailwind output
+│   ├── img/                # Images and media
+│   └── js/
+│       ├── src/
+│       │   ├── main.js     # Core application logic
+│       │   ├── about.js    # About page scripts
+│       │   ├── jpg-to-pdf.js
+│       │   ├── merge-pdf.js
+│       │   └── pdf-to-jpg.js
+│       └── vendor/         # Third-party libraries
+│           ├── jspdf.umd.min.js
+│           ├── jszip.min.js
+│           ├── pdf-lib.min.js
+│           ├── pdf.min.js
+│           └── pdf.worker.min.js
+└── tools/
+    ├── jpg-to-pdf.html
+    ├── merge-pdf.html
+    └── pdf-to-jpg.html
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- No additional software or dependencies needed for usage
+
+### Installation & Development
+
+1. **Clone or download the repository:**
+   ```bash
+   git clone <repository-url>
+   cd MyToolKitPro
+   ```
+
+2. **Install development dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run build process (if needed):**
+   ```bash
+   npm run build
+   ```
+
+4. **Open in browser:**
+   - Simply open `index.html` in your web browser
+   - Or use a local server: `npx http-server` or `python -m http.server 8000`
+
+## 📦 Dependencies
+
+### Production
+- **PDF.js** - PDF viewing and manipulation
+- **jsPDF** - Generate PDFs in JavaScript
+- **pdf-lib** - Advanced PDF manipulation library
+- **JSZip** - ZIP file creation (for handling multiple files)
+
+### Development
+- **Tailwind CSS** v4.2.1 - Utility-first CSS framework
+- **PostCSS** - CSS transformation tool
+- **Autoprefixer** - Vendor prefix management
+
+## 🔐 Privacy & Security
+
+- **No Data Collection** - We don't store or transmit your files to any servers
+- **Local Processing** - All conversions happen completely within your browser
+- **No Tracking** - No analytics or tracking cookies
+- **Open Source** - Code transparency for security audits
+
+## 🎨 Styling & Build System
+
+The project uses **Tailwind CSS** for styling with a custom configuration:
+- **Configuration File:** `tailwind.config.js`
+- **Input:** `assets/css/tailwind.css`
+- **Output:** `assets/css/main.css`
+- **Custom CSS:** `assets/css/custom.css`
+
+### Building Styles
+
+```bash
+# One-time build
+npm run build:css
+
+# Watch mode (auto-rebuild on changes)
+npm run watch:css
+```
+
+### JavaScript Minification
+
+All JS files in `assets/js/src/` are automatically minified to `assets/js/dist/`:
+- **Entry:** `assets/js/src/*.js`
+- **Output:** `assets/js/dist/*.min.js`
+- **Tool:** Terser with source maps
+- **Build Command:** `npm run build:js`
+
+## 📱 Browser Support
+
+- Chrome/Chromium (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome for Android)
+
+## 🌐 SEO
+
+- Sitemap: `sitemap.xml`
+- Robots: `robots.txt`
+- Meta tags optimized for search engines
+- Canonical URLs configured
+- Schema.org structured data
+
+## � Deployment
+
+The site is a **static HTML/CSS/JS** application deployable to any web host:
+
+### Deployment Options
+
+1. **Netlify** (recommended)
+   ```bash
+   npm run build
+   # Connect GitHub repo → auto-deploys
+   ```
+
+2. **Vercel**
+   - Connect GitHub → auto-deploys on push
+
+3. **Traditional Hosting** (Apache, Nginx, cPanel, etc.)
+   - Upload all files via FTP/SSH
+   - No build step required on server
+
+4. **GitHub Pages**
+   ```bash
+   # Push to gh-pages branch
+   ```
+
+### Security Headers (Recommended)
+Add these headers via your hosting provider:
+```
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'self'; script-src 'self'
+```
+
+See `deploy/nginx-security.conf` and `deploy/apache-security.conf` for examples.
+
+## 📊 Performance
+
+### File Size Limits
+- **PDF Conversion:** Depends on browser memory (typically 100-500MB)
+- **Image Conversion:** Recommended max 50MB per file
+- **Merge PDFs:** Test with your target audience's device capabilities
+
+### Optimization
+- All JS is minified (`assets/js/dist/*.min.js`)
+- CSS is generated and minified via Tailwind
+- No external API calls - all processing is local
+- Lazy loading for third-party libraries
+
+### Network Performance
+- Initial load: ~50-100KB (gzipped)
+- Vendor libraries: ~500KB-1MB (loaded on-demand)
+- No API backend required
+
+## ♿ Accessibility
+
+- ARIA labels on all interactive elements
+- Keyboard navigation support
+- Semantic HTML structure
+- Color contrast meets WCAG AA standards
+- Form inputs properly labeled
+
+## 🔄 PWA (Progressive Web App)
+
+MyToolKitPro works offline and can be installed as an app:
+
+1. **Install on Desktop/Mobile:**
+   - Open site in Chrome/Edge
+   - Click "Install" or "Add to Home Screen"
+
+2. **Offline Access:**
+   - All tools work without internet (after first load)
+   - Files processed locally in browser
+
+3. **Icon & Splash Screen:**
+   - Auto-generated from `assets/img/icon-*.png`
+   - Appears on installation
+
+- **Home** (`index.html`) - Landing page with tool highlights
+- **Tools** (`tools.html`) - Complete list of available tools
+- **About** (`about.html`) - Information about MyToolKitPro
+- **Contact** (`contact.html`) - Contact information
+- **Privacy Policy** (`privacy-policy.html`) - Data privacy information
+- **Terms of Service** (`terms-of-service.html`) - Usage terms
+
+## 🐛 Troubleshooting
+
+### Tools not working in browser
+- Clear browser cache and reload (Ctrl+Shift+Delete)
+- Try a different browser
+- Ensure JavaScript is enabled
+- Check browser console for errors (F12)
+
+### File size limits
+- Browser memory limitations may apply (typically 100-500MB)
+- Try working with smaller files if experiencing issues
+- Close other tabs to free up memory
+
+### Build issues
+```bash
+# Clear node_modules and reinstall
+rm -r node_modules
+npm install
+
+# Clean build
+npm run build
+```
+
+### Styling issues
+- Ensure `npm run build:css` completed successfully
+- Check `assets/css/main.css` exists and is referenced in HTML
+- Clear browser cache (Ctrl+Shift+Delete)
+
+## 📞 Support
+
+For issues, suggestions, or feedback, please check the contact page or open an issue in the repository.
+
+## 📜 License
+
+This project is licensed under the ISC License. See the LICENSE file for details.
+
+## 👨‍💻 Author
+
+**MyToolKitPro** - A free toolkit for PDF and image conversion
+
+---
+
+**Last Updated:** February 2026
+
+**Version:** 1.0.0
+
+Made with ❤️ for productivity and simplicity.

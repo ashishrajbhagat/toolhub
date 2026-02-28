@@ -6,3 +6,5 @@
   --color-darktext: #1F2937;
   --color-borderclr: #E5E7EB;
 }
+
+@import "./custom.css";

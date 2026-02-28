@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://toolhub.com/index.html</loc>
+    <loc>https://mytoolkitpro.com/index.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/tools.html</loc>
+    <loc>https://mytoolkitpro.com/tools.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/tools/pdf-to-jpg.html</loc>
-    <lastmod>2026-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://toolhub.com/tools/jpg-to-pdf.html</loc>
+    <loc>https://mytoolkitpro.com/tools/pdf-to-jpg.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://toolhub.com/tools/merge-pdf.html</loc>
+    <loc>https://mytoolkitpro.com/tools/jpg-to-pdf.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://mytoolkitpro.com/tools/merge-pdf.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/about.html</loc>
+    <loc>https://mytoolkitpro.com/about.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/contact.html</loc>
+    <loc>https://mytoolkitpro.com/contact.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/privacy-policy.html</loc>
+    <loc>https://mytoolkitpro.com/privacy-policy.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://toolhub.com/terms-of-service.html</loc>
+    <loc>https://mytoolkitpro.com/terms-of-service.html</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
