@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
             uploadErrorMessage.innerHTML = `❌ Error: File size (${formatBytes(pdfFile.size)}) exceeds maximum limit (${formatBytes(MAX_FILE_SIZE)}). Please select a smaller file.`;
             pdfFile = null;
             return;
+        } else {
+            uploadErrorMessage.classList.add("hidden");
         }
 
         // Show warning if file is large
@@ -333,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
         processingState.classList.add("hidden");
         resultsArea.classList.add("hidden");
         uploadArea.classList.remove("hidden");
+        uploadErrorMessage.classList.add("hidden");
 
         // Scroll back to the upload area
         uploadArea.scrollIntoView({ behavior: "smooth", block: "center" });
