@@ -91,8 +91,8 @@ MyToolKitPro/
 │   │   ├── favicon-32.png          # Standard browser tab icon
 │   │   ├── favicon.ico             # Legacy browser icon
 │   │   ├── favicon.svg             # Modern vector tab icon
-│   │   ├── icon-192.png            # PWA manifest icon
-│   │   ├── icon-512.png            # PWA manifest large icon
+│   │   ├── favicon-192.png         # PWA manifest icon
+│   │   ├── favicon-512.png         # PWA manifest large icon
 │   │   ├── logo-horizontal.svg     # Main site logo (Header)
 │   │   ├── logo.svg                # Square site logo
 │   │   └── og-image.png            # Social media sharing preview
